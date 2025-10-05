@@ -1,5 +1,5 @@
 # Use a minimal Python image
-FROM python:3.13.7
+FROM python:3.11-slim
 
 # Set environment variables for better output (optional)
 ENV PYTHONUNBUFFERED 1
@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Inform Docker that the container will listen on this port
-EXPOSE 7860
+EXPOSE 8080
 
 # Command to run the application when the container starts
 CMD ["python", "main.py"]
