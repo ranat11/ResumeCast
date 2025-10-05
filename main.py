@@ -6,7 +6,7 @@ from pypdf import PdfReader
 from dotenv import load_dotenv
 from agents import Agent, Runner, function_tool, OpenAIChatCompletionsModel
 from openai import AsyncOpenAI
-from weasyprint import HTML
+# from weasyprint import HTML
 
 # --- Configuration ---
  
@@ -77,9 +77,9 @@ def resume_wrapper(final_summary: str, resume_detail: str, job_detail: str) -> d
     with open(output_filepath, "w", encoding="utf-8") as file:
         file.write(design_answer)
         
-    print("Resume_wrapper: Resume content generated. Converting to PDF ...")
-    output_filepath = "your_new_resume.pdf"
-    HTML(string=design_answer).write_pdf(output_filepath)
+    # print("Resume_wrapper: Resume content generated. Converting to PDF ...")
+    # output_filepath = "your_new_resume.pdf"
+    # HTML(string=design_answer).write_pdf(output_filepath)
         
     print(f"Resume saved to {output_filepath}")
 
