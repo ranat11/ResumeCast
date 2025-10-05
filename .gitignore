@@ -1,0 +1,31 @@
+# Environment variables
+.env
+*.env.*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE and editor directories
+.vscode/
+.idea/
+
+# Generated output files
+*.pdf
+*.html
+
+# Jupyter Notebook files
+*.ipynb
+
+tmp*
+example*
+
+# Virtual environment folders
+venv/
+.venv/
+env/
