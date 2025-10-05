@@ -228,9 +228,10 @@ async def chat_interface_fn(message: str, history: List[dict[str, str]], downloa
     # We need to check if the tool was called and parse the output.
     # For simplicity, we'll check if the reply contains a hint that the file is ready.
     # A more robust solution would use sessions and inspect the tool outputs.
-    if "resume is ready" in reply_text.lower() or "your_new_resume.html" in reply_text:
+    if "resume is ready" in reply_text.lower() or "your_new_resume.pdf" in reply_text or "your_new_resume.html" in reply_text:
         # A bit of a hack: assume the file is ready if the agent says so.
-        file_path_from_tool = "your_new_resume.html"
+        # file_path_from_tool = "your_new_resume.html"
+        file_path_from_tool = "your_new_resume.pdf"
         if os.path.exists(file_path_from_tool):
             new_download_path = file_path_from_tool
             
