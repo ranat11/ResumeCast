@@ -2,3 +2,4 @@ gradio
 pypdf
 python-dotenv
 openai
+weasyprint
