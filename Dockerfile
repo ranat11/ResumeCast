@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Inform Docker that the container will listen on this port
-EXPOSE 8000
+EXPOSE 7860
 
 # Command to run the application when the container starts
 CMD ["python", "main.py"]
