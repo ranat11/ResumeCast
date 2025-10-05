@@ -7,6 +7,15 @@ ENV PYTHONUNBUFFERED 1
 # Set the working directory
 WORKDIR /usr/src/app
 
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    pkg-config \
+    cmake \
+    libcairo2-dev \
+    # Clean up to keep the image size small
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy dependency file first (for efficient caching)
 COPY requirements.txt .
 
